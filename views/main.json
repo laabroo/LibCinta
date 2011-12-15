@@ -1,7 +1,8 @@
 {
 	"style": {
 		"background-color": "white",
-		"border": 10
+		"border": 10,
+        "overflow": true
 	},
 
 	"contents": [

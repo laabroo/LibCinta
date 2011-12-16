@@ -1,22 +1,12 @@
 {
 	"style": {
-		"background-color": "white",
-		"border": 10,
-        "overflow": true
+		"background-color": "#2e2e2e",
+		"border": 2,
+		"overflow":"auto"
 	},
 
 	"contents": [
-		//{
-		//	"name": "title",
-		//	"control": "TextView",
-		//	"label": "libcinta",
-		//	"style": {
-		//		"color": "black",
-		//		"width": "fill-parent",
-		//		"height": "fill-parent",
-		//		"align": "center",
-		//		"valign": "middle"
-		//	}
-		//}
+		
 	]
 }
+

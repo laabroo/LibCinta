@@ -32,41 +32,42 @@ _.extend(exports, {
                         if (i % 2 === 0) {
                             temp = new TextView({
                                 label: item,
-                                style: {
-                                    color: 'white',
-                                    width: 'fill-parent',
-                                    'background-color': '#504b4b'
-                                }
+                                color: 'black',
+                                width: 'fill-parent',
+                                'background-color': 'transparent'
                             });
                             temp.on('blur', function() {
                                 this.style({
-                                    'color': 'white',
-                                    'background-color': '#504b4b'
+                                    'color': 'black',
+                                    'background-color': 'transparent',
+                                    'font-weight': 'normal'
                                 });
                             });
                         } else {
                             temp = new TextView({
                                 label: item,
                                 style: {
-                                    color: 'white',
+                                    color: 'black',
                                     width: 'fill-parent',
-                                    'background-color': '#2e2e2e'
+                                    'background-color': '#009eff'
                                 }
                             });
                             temp.on('blur', function() {
                                 this.style({
-                                    'color': 'white',
-                                    'background-color': '#2e2e2e'
+                                    'color': 'black',
+                                    'background-color': '#009eff',
+                                    'font-weight': 'normal'
                                 });
                             });
                         }
                         temp.on('activate', function() {
-       
+
                         });
                         temp.on('focus', function() {
                             this.style({
                                 'color': 'black',
-                                'background-color': '#eeeeee'
+                                'background-color': '#3682b0',
+                                'font-weight': 'bold'
                             });
                         });
                         view.add(item, temp);

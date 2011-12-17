@@ -5,7 +5,6 @@ var scaling = new (require('blaast/scaling').Scaling)();
 var http = require('blaast/simple-http');
 var QS = require('querystring');
 var url = require('url');
-var QS = require('querystring');
 
 app.message(function(client, action, data) {
     console.log('Action : ' + action);

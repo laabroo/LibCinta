@@ -15,14 +15,15 @@ _.extend(exports, {
         console.log('View was loaded');
         var view = this;
         var title = new TextView({
-            label: 'Kata-Kata Cinta Hari Ini',
+            label: 'Info Gempa - BMKG',
             style: {
                 color: '#FFD700',
                 'font-size': 'normal',
                 width : 'fill-parent',
                 'font-weight': 'bold',
-                border: '0 0 4 0',
-                align: 'center'
+                'background-color':'#00BFFF',
+                border: '4 0 4 4',
+                align: 'right'
             }
         });
 
@@ -46,14 +47,19 @@ _.extend(exports, {
                     clearInterval(view.intervalId);
                     delete view.intervalId;
                     var i = 1;
-                    var temp;
-                    var dataArray = [data.text.content];
+                    var temp = null;
+                    var dataArray = null;
+                    dataArray = [data.text.content];
                     var pan = dataArray;
                     console.log('Panjang : ' + pan.length);
+
                     dataArray.forEach(function(item) {
+                        var c = 1;
                         console.log('Item : ' + item);
-                        console.log('Panjang Item : ' + dataArray.length);
-                        if (i % 2 === 0) {
+//                        for (c = 1; c < 21; c++) {
+                            console.log('Panjang Item : ' + c);
+
+                        if (c % 2 === 0) {
                             temp = new TextView({
                                 label: item,
                                 color: 'black',
@@ -73,17 +79,18 @@ _.extend(exports, {
                                 style: {
                                     color: 'black',
                                     width: 'fill-parent',
-                                    'background-color': '#FDF5E6'
+                                    'background-color': '#FFFFFF'
                                 }
                             });
                             temp.on('blur', function() {
                                 this.style({
                                     'color': 'black',
-                                    'background-color': '#FDF5E6',
+                                    'background-color': '#FFFFFF',
                                     'font-weight': 'normal'
                                 });
                             });
                         }
+
                         temp.on('activate', function() {
 
                         });
@@ -94,8 +101,9 @@ _.extend(exports, {
                                 'font-weight': 'bold'
                             });
                         });
+
                         view.add(item, temp);
-                        i++;
+//                        i++;
                     });
                     view.focusItem(0);
                 }
@@ -103,8 +111,7 @@ _.extend(exports, {
             });
             setInterval(function() {
                 app.msg('loadData', {data : ""});
-            }, 60000);
-
+            }, 120000);
         });
 
     },

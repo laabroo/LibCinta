@@ -1,2 +1,2 @@
-// libcinta -- bootstrap.js
+// infogempa -- bootstrap.js
 var app = this;
